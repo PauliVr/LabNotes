@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase/firebase';
+import './ButtonLogOut.css';
 
 export default function ButtonLogOut() {
   const navigate = useNavigate();
@@ -10,5 +11,9 @@ export default function ButtonLogOut() {
       .catch((error) => console.log(error));
   }
 
-  return <button onClick={logOut}>Cerrar Sesión</button>;
+  return (
+    <button className='btn__logout' onClick={logOut}>
+      <img src='./assets/Log_Out.svg' alt='' />
+    </button>
+  );
 }

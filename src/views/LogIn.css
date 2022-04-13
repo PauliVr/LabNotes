@@ -20,6 +20,17 @@
   width: 50%;
 }
 
+.login__title--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__title--container img {
+  margin: 0 10px;
+}
+
 .login__title {
   color: var(--DeepPink);
   font-weight: 300;
@@ -180,7 +191,7 @@
 .hero .hero__img:nth-child(5) {
   width: 65%;
   left: 25%;
-  bottom: 10%;
+  bottom: 6%;
 }
 
 .hero .hero__img:nth-child(6) {

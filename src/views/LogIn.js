@@ -33,11 +33,19 @@ function LogIn() {
     }
   }
 
+  //  const expEmail = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
+  //  const expPassword =
+  //    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+
   return (
     <section className='container_login'>
       <div className='login'>
         <div className='login__content'>
-          <h2 className='login__title'>INICIAR SESIÓN</h2>
+          <div className='login__title--container'>
+            <img src='./assets/estrellita.svg' alt='' />
+            <h2 className='login__title'>INICIAR SESIÓN</h2>
+            <img src='./assets/estrellita.svg' alt='' />
+          </div>
           <form action='' className='form'>
             <div className='form__group'>
               <img src='https://svgshare.com/i/g6x.svg' alt='' className='form__icon' />

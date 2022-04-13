@@ -1,4 +1,5 @@
 import '../globalStyles.css';
+import './Dashboard.css';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
@@ -18,9 +19,19 @@ export default function Dashboard() {
   });
 
   return (
-    <>
-      <h1>Mis notas</h1>
-      <ButtonLogOut></ButtonLogOut>
-    </>
+    <section className='container_dashboard'>
+      <div className='dashboard__container'>
+        <div className='heroDashboard'>
+          <ButtonLogOut></ButtonLogOut>
+        </div>
+        <div className='dashboard'>
+          <div className='dashboard__title'>
+            <img src='./assets/estrellita.svg' alt='' />
+            <h1 className='dashboard__title--text'>Mi Espacio</h1>
+            <img src='./assets/estrellita.svg' alt='' />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
