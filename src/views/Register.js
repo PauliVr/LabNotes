@@ -1,18 +1,36 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import '../globalStyles.css';
 import './Register.css';
 import useForm from '../Hooks/useForm';
 import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth, registerUserEmailPass, userExist } from '../firebase/firebase';
 
 function Register() {
   let navigate = useNavigate();
-  const formRegister = () => {
-    console.log('Form Values', values);
-  };
-
   const { handleChange, values, errors, handleSubmit } = useForm(formRegister);
-  console.log(values);
-  console.log(errors);
+
+  async function formRegister() {
+    try {
+      const res = await createUserWithEmailAndPassword(auth, values.email, values.password);
+      await registerUserEmailPass(
+        auth.currentUser.uid,
+        values.userName,
+        values.name,
+        auth.currentUser.email,
+        values.password
+      );
+
+      const registered = await userExist(auth.currentUser.uid);
+      console.log(registered);
+      if (registered && auth.currentUser.uid) {
+        navigate('/');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <section className='container_register'>

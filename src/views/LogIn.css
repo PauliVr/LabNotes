@@ -77,6 +77,10 @@
   width: 100%;
 }
 
+.form__input {
+  color: var(--LightGray);
+}
+
 .form__text {
   border-top: none;
   border-left: none;

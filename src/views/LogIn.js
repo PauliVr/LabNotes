@@ -12,8 +12,6 @@ function LogIn() {
     onAuthStateChanged(auth, async (user) => {
       if (user) {
         await registerUser(user.uid, user.displayName, user.email);
-        // console.log(await registerUser(user.uid, user.displayName, user.email));
-
         const isRegistered = await userExist(user.uid);
         if (isRegistered && user.uid) {
           navigate('/');
@@ -27,7 +25,6 @@ function LogIn() {
     const googleProvider = new GoogleAuthProvider();
     try {
       const res = await signInWithPopup(auth, googleProvider);
-      console.log(res);
     } catch (error) {
       console.error(error);
     }

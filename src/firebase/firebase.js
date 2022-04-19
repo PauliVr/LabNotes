@@ -13,8 +13,7 @@ import {
   setDoc,
   deleteDoc,
 } from 'firebase/firestore';
-import { async } from '@firebase/util';
-import { cloneElement } from 'react';
+import useForm from '../Hooks/useForm';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAF69GlD9YNy106CYWYcGm9FqKYOap70KM',
@@ -27,7 +26,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const auth = getAuth();
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -51,5 +50,25 @@ export async function registerUser(uid, name, email) {
     });
   } catch (error) {
     console.log('usuario no guardado', error);
+  }
+}
+
+export async function registerUserEmailPass(uid, userName, name, email, password) {
+  try {
+    const userCollection = collection(db, 'users');
+    console.log(uid);
+    console.log(userName);
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    await setDoc(doc(userCollection, uid), {
+      uid,
+      userName,
+      name,
+      email,
+      password,
+    });
+  } catch (e) {
+    console.log('Usuario no guardado', e);
   }
 }

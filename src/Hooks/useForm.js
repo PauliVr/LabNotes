@@ -1,6 +1,8 @@
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { omit } from 'lodash';
-import Error404 from '../views/Error404';
+import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { auth, registerUser, registerUserEmailPass, userExist } from '../firebase/firebase';
 
 const useForm = (callback) => {
   //Form values
@@ -9,6 +11,10 @@ const useForm = (callback) => {
   //Errors
   const [errors, setErrors] = useState({});
 
+  const [email, setMail] = useState('');
+  const [password, setPassword] = useState('');
+
+  //Validación de los inputs del formulario
   const expEmail = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
   const expPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
@@ -55,6 +61,7 @@ const useForm = (callback) => {
         } else {
           let newObj = omit(errors, 'email');
           setErrors(newObj);
+          setMail(newObj.email);
         }
         break;
 
@@ -68,6 +75,7 @@ const useForm = (callback) => {
         } else {
           let newObj = omit(errors, 'password');
           setErrors(newObj);
+          setPassword(newObj.password);
         }
         break;
 
@@ -94,6 +102,7 @@ const useForm = (callback) => {
     }
   };
 
+  //evento para detectar el cambio del valor del input
   const handleChange = (event) => {
     event.persist();
 
@@ -120,6 +129,8 @@ const useForm = (callback) => {
 
   return {
     values,
+    email,
+    password,
     errors,
     handleChange,
     handleSubmit,
