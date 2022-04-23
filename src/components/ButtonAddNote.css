@@ -1,7 +1,7 @@
-.btn__logout {
+.btn__addnote {
   background-color: transparent;
   border-style: none;
   position: fixed;
-  bottom: 35px;
-  left: 25px;
+  left: 35px;
+  top: 51px;
 }

@@ -5,6 +5,8 @@ import { auth } from '../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import ButtonLogOut from '../components/ButtonLogOut';
+import Notas from '../components/Notas';
+import ButtonAddNote from '../components/ButtonAddNote';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -22,6 +24,7 @@ export default function Dashboard() {
     <section className='container_dashboard'>
       <div className='dashboard__container'>
         <div className='heroDashboard'>
+          <ButtonAddNote />
           <ButtonLogOut></ButtonLogOut>
         </div>
         <div className='dashboard'>
@@ -29,6 +32,9 @@ export default function Dashboard() {
             <img src='./assets/estrellita.svg' alt='' />
             <h1 className='dashboard__title--text'>Mi Espacio</h1>
             <img src='./assets/estrellita.svg' alt='' />
+          </div>
+          <div className='container__notes'>
+            <Notas />
           </div>
         </div>
       </div>

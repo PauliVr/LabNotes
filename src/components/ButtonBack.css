@@ -1,0 +1,12 @@
+.button__back {
+  background-color: transparent;
+  border-style: none;
+  position: fixed;
+  top: 60px;
+  left: 40px;
+}
+
+.button__back--img {
+  width: 55px;
+  height: 55px;
+}

@@ -1,18 +1,16 @@
 .container_dashboard {
   display: flex;
   flex-direction: row-reverse;
+  position: relative;
 }
 .dashboard__container {
   display: flex;
   flex-direction: row;
-  width: 95vw;
-  height: 100vh;
+  width: 93%;
+  height: 100%;
 }
 
 .heroDashboard {
-  position: relative;
-  right: 55px;
-  top: 960px;
 }
 
 .dashboard {

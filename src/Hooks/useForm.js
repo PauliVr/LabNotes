@@ -5,14 +5,14 @@ import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/aut
 import { auth, registerUser, registerUserEmailPass, userExist } from '../firebase/firebase';
 
 const useForm = (callback) => {
-  //Form values
+  //Form values Registger
   const [values, setValues] = useState({});
+
+  //Form values login
+  const [valueS, setValueS] = useState({});
 
   //Errors
   const [errors, setErrors] = useState({});
-
-  const [email, setMail] = useState('');
-  const [password, setPassword] = useState('');
 
   //Validación de los inputs del formulario
   const expEmail = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
@@ -61,7 +61,6 @@ const useForm = (callback) => {
         } else {
           let newObj = omit(errors, 'email');
           setErrors(newObj);
-          setMail(newObj.email);
         }
         break;
 
@@ -75,7 +74,6 @@ const useForm = (callback) => {
         } else {
           let newObj = omit(errors, 'password');
           setErrors(newObj);
-          setPassword(newObj.password);
         }
         break;
 
@@ -115,12 +113,19 @@ const useForm = (callback) => {
       ...values,
       [name]: val,
     });
+
+    setValueS({
+      ...valueS,
+      [name]: val,
+    });
   };
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
-
-    if (Object.keys(errors).length === 0 && Object.keys(values).length !== 0) {
+    console.log(valueS);
+    if (Object.keys(errors).length === 0 && Object.keys(valueS).length === 2) {
+      callback();
+    } else if (Object.keys(errors).length === 0 && Object.keys(values).length !== 0) {
       callback();
     } else {
       alert('there is an error');
@@ -129,8 +134,7 @@ const useForm = (callback) => {
 
   return {
     values,
-    email,
-    password,
+    valueS,
     errors,
     handleChange,
     handleSubmit,

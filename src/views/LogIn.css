@@ -68,7 +68,7 @@
   position: absolute;
   top: 8px;
   left: 0px;
-  color: var(--LightGray);
+  color: var(--LigthGray);
   transition: top 0.2s ease, font-size 0.2s ease;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .form__input {
-  color: var(--LightGray);
+  color: var(--LigthGray);
 }
 
 .form__text {
@@ -100,7 +100,7 @@
   outline: none;
 }
 .form__text:focus::placeholder {
-  color: var(--LightGray);
+  color: var(--LigthGray);
 }
 
 .form__text:focus ~ .form__label,
@@ -170,7 +170,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .hero__text {
@@ -195,7 +195,7 @@
 .hero .hero__img:nth-child(5) {
   width: 65%;
   left: 25%;
-  bottom: 6%;
+  bottom: 8%;
 }
 
 .hero .hero__img:nth-child(6) {

@@ -9,6 +9,8 @@
   --Gray: #263238;
   --DeepGray: #595757;
   --LigthGray: #c7c7c7;
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-45: rgba(255, 255, 255, 0.45);
 }
 
 * {

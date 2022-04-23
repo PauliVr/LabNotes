@@ -1,5 +1,3 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
 import '../globalStyles.css';
 import './Register.css';
 import useForm from '../Hooks/useForm';
