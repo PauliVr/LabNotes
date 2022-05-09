@@ -27,6 +27,7 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
+// export const user = auth.currentUser;
 const db = getFirestore(app);
 // const storage = getStorage(app); //imagen
 
@@ -72,7 +73,7 @@ export async function registerUserEmailPass(uid, userName, name, email, password
     console.log('Usuario no guardado', e);
   }
 }
-export async function saveNote(title, content) {
+export async function saveNote(title, content, uid) {
   let alert = '';
   let today = new Date();
   const monthNames = [
@@ -99,6 +100,7 @@ export async function saveNote(title, content) {
       title,
       content,
       registerDay,
+      uid,
     });
     alert = 'check';
   } catch (e) {
@@ -108,15 +110,18 @@ export async function saveNote(title, content) {
   return alert;
 }
 
-export async function getNote() {
-  const data = [];
+export async function getNote(uid) {
+  let data = [];
+  console.log(uid);
   const querySnapshot = await getDocs(collection(db, 'notes'));
   querySnapshot.forEach((doc) => {
     data.push({ id: doc.id, infoNote: doc.data() });
   });
-  console.log(data);
 
-  return data;
+  const colectionData = data.filter((doc) => doc.infoNote.uid === uid);
+  console.log(colectionData);
+
+  return colectionData;
 }
 
 export async function getUserNote(id) {
@@ -168,4 +173,4 @@ export async function updateNote(id, title, content) {
   }
   return alert;
 }
-updateNote();
+

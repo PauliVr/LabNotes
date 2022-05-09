@@ -5,10 +5,11 @@ import { auth, getNote } from '../firebase/firebase';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ButtonLogOut from '../components/ButtonLogOut';
-import Nota from '../components/Nota';
+import Note from '../components/Note';
 import ButtonAddNote from '../components/ButtonAddNote';
 import ButtonBack from '../components/ButtonBack';
 import Loader from '../components/Loader';
+import Modal from '../components/Modal';
 
 export default function Dashboard() {
   const [notas, setNotas] = useState([]);
@@ -17,18 +18,22 @@ export default function Dashboard() {
 
   //se ejecuta al cambiar esta o renderiza por primera vez
   useEffect(() => {
-    getNote()
-      .then((snapshot) => {
-        console.log(snapshot);
-        setNotas(snapshot);
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         navigate('/login');
+      } else {
+        getNote(user.uid)
+          .then((snapshot) => {
+            if (snapshot.length > 0) {
+              console.log(snapshot);
+              setNotas(snapshot);
+            }
+
+            setLoading(false);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
       }
     });
   }, []);
@@ -52,7 +57,7 @@ export default function Dashboard() {
         <div className='container__notes'>
           {notas.length > 0 ? (
             notas?.map((doc) => (
-              <Nota
+              <Note
                 id={doc.id}
                 title={doc.infoNote.title}
                 content={doc.infoNote.content}
@@ -64,6 +69,7 @@ export default function Dashboard() {
           )}
         </div>
       </div>
+      <Modal />
     </section>
   );
 }

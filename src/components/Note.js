@@ -1,8 +1,8 @@
-import './Nota.css';
+import './Note.css';
 import '../globalStyles.css';
 import ButtonDelete from './ButtonDelete';
 import ButtonEdit from './ButtonEdit';
-import { doc } from 'firebase/firestore';
+
 
 const color = [
   {
@@ -47,7 +47,7 @@ const color = [
   },
 ];
 
-export default function Nota(props) {
+export default function Note(props) {
   const indexNoteColor = Math.floor(Math.random() * color.length);
   const randomNoteColor = color[indexNoteColor].noteColor;
   const randomTitleColor = color[indexNoteColor].title;

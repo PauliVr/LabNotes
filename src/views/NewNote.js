@@ -4,10 +4,9 @@ import ButtonLogOut from '../components/ButtonLogOut';
 import ButtonBack from '../components/ButtonBack';
 import useFormNote from '../Hooks/useFormNote';
 import { useNavigate, useParams } from 'react-router-dom';
-import { saveNote, getUserNote, updateNote } from '../firebase/firebase';
+import { saveNote, getUserNote, updateNote, auth } from '../firebase/firebase';
 import AlertNote from '../components/AlertNote';
 import { useEffect, useState } from 'react';
-import { updateDoc } from 'firebase/firestore';
 
 const colors = [
   {
@@ -94,7 +93,7 @@ export default function NewNote() {
       } else {
         data = values;
         try {
-          const registeredNote = await saveNote(data.title, data.content);
+          const registeredNote = await saveNote(data.title, data.content, auth.currentUser.uid);
           console.log(registeredNote);
           setAlert(registeredNote);
           setTimeout(() => {
