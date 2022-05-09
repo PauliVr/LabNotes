@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { omit } from 'lodash';
-import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { auth, registerUser, registerUserEmailPass, userExist } from '../firebase/firebase';
 
 const useForm = (callback) => {
-  //Form values Registger
+  //Form values Register
   const [values, setValues] = useState({});
 
   //Form values login
@@ -19,7 +16,7 @@ const useForm = (callback) => {
   const expPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
   const expUserName = /[A-Za-z][A-Za-z0-9_]{7,20}/;
-  const expName = /[A-Za-z]+\s[A-Za-z]{7,20}/;
+  const expName = /[A-Za-z]+\s[A-Za-z]{5,22}/;
 
   const validate = (event, name, value) => {
     switch (name) {
@@ -27,12 +24,12 @@ const useForm = (callback) => {
         if (!expUserName.test(value)) {
           setErrors({
             ...errors,
-            userName: 'Tú nombre de usuario debe tener letras, numeros y solo se permite _ ',
+            userName: 'Tú nombre de usuario debe tener letras, números y solo se permite _ ',
           });
         } else if (value < 0 && value > 20) {
           setErrors({
             ...errors,
-            userName: 'Tú nombre de usuario debe tener entre 8 a 19 caracteres',
+            userName: 'Tu nombre de usuario debe tener entre 8 a 19 caracteres',
           });
         } else {
           let newObj = omit(errors, 'userName');
@@ -56,7 +53,7 @@ const useForm = (callback) => {
         if (!expEmail.test(value)) {
           setErrors({
             ...errors,
-            email: 'ingresa un correo electronico valido',
+            email: 'ingresa un correo electrónico valido',
           });
         } else {
           let newObj = omit(errors, 'email');
@@ -69,7 +66,7 @@ const useForm = (callback) => {
           setErrors({
             ...errors,
             password:
-              'ingresa una contraseña con el formato valido, una mayuscula, un numero, una minusula y un carater especial',
+              'ingresa una contraseña con el formato valido, una mayúscula, un numero, una minúscula y un carater especial',
           });
         } else {
           let newObj = omit(errors, 'password');
@@ -82,7 +79,7 @@ const useForm = (callback) => {
           setErrors({
             ...errors,
             repeatPass:
-              'La contraseña debe tener 9 caracteres -> una mayuscúla, un número, una minúscula y un caráter especial',
+              'La contraseña debe tener 9 caracteres -> una mayúscula, un número, una minúscula y un caráter especial',
           });
         } else if (value !== values['password']) {
           setErrors({

@@ -53,10 +53,6 @@ function LogIn() {
     }
   }
 
-  //  const expEmail = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
-  //  const expPassword =
-  //    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
-
   return (
     <section className='container_login'>
       <div className='login'>
@@ -103,7 +99,7 @@ function LogIn() {
               </div>
             </div>
             <div className='form__buttons'>
-              <button type='submit' className='form__button'>
+              <button type='submit' className='form__button--login'>
                 Entrar
               </button>
               <Link to='/registro' className='form__link'>
@@ -120,7 +116,7 @@ function LogIn() {
         <h1 className='hero__title'>SpaceNotes</h1>
         <div className='hero__slogan'>
           <img src='./assets/MoonIcon.svg' alt='' className='hero__icon' />
-          <h3 className='hero__text'>“El espacio para organizar tú vida” </h3>
+          <h3 className='hero__text'>“ El espacio para organizar tu vida ” </h3>
           <img src='./assets/PlanetIcon.svg' alt='' className='hero__icon' />
         </div>
         <img src='./assets/nebulousstars.svg' alt='' className='hero__img' />

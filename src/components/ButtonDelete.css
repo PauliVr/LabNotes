@@ -1,8 +1,7 @@
-.btn__logout {
+.button__delete {
   background-color: transparent;
   border-style: none;
 }
-
-.btn__logout img {
-  width: 100px;
+.button__delete img {
+  width: 50px;
 }

@@ -1,7 +1,8 @@
 .btn__addnote {
   background-color: transparent;
   border-style: none;
-  position: fixed;
-  left: 35px;
-  top: 51px;
+}
+
+.btn__addnote img {
+  width: 60px;
 }

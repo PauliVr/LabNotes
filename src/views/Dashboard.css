@@ -1,7 +1,6 @@
 .container_dashboard {
+  min-height: 100vh;
   display: flex;
-  flex-direction: row-reverse;
-  position: relative;
 }
 .dashboard__container {
   display: flex;
@@ -10,15 +9,20 @@
   height: 100%;
 }
 
-.heroDashboard {
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
 }
-
-.dashboard {
+.notes__container {
   width: 100%;
-  font-size: 32px;
-  text-align: center;
-  background-color: white;
-  border-top-left-radius: 115px;
+  height: auto;
+  background: white;
+  border-top-left-radius: 90px;
+  display: flex;
+  flex-direction: column;
 }
 
 .dashboard__title {
@@ -31,4 +35,45 @@
 .dashboard__title--text {
   color: var(--DeepPink);
   margin: 50px 0;
+  font-size: 70px;
+}
+
+.container__notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 35px;
+  min-width: 50%;
+}
+
+.container__notes img {
+  width: 120%;
+}
+
+.btn__add {
+  width: 100px;
+  position: fixed;
+  top: 0;
+}
+
+.btn__log {
+  position: fixed;
+  bottom: 0;
+}
+
+.size {
+  width: 50px;
+  align-self: center;
+}
+
+@media (min-width: 1180px) {
+  .dashboard__title--text {
+    font-size: 50px;
+  }
+  .btn__logout img {
+    width: 60px;
+  }
+  .btn__addnote img {
+    width: 60px;
+  }
 }

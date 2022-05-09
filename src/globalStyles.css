@@ -5,10 +5,10 @@
   --DeepPink: #d63197;
   --PinkPurple: #d880a6;
   --Salmon: #f4bac2;
-  --LigthSalmon: #fee1e2;
+  --LightSalmon: #fee1e2;
   --Gray: #263238;
   --DeepGray: #595757;
-  --LigthGray: #c7c7c7;
+  --LightGray: #c7c7c7;
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --white-alpha-45: rgba(255, 255, 255, 0.45);
 }
@@ -26,7 +26,14 @@ body {
     var(--Purple),
     var(--DeepPink),
     var(--Salmon),
-    var(--LigthSalmon)
+    var(--LightSalmon)
   );
   background-repeat: no-repeat;
+}
+
+@media (min-width: 2360) {
+  .dashboard__title--text { 
+    margin: 38px 0;
+    font-size: 50px;
+  }
 }

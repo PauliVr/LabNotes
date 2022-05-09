@@ -1,8 +1,8 @@
-.btn__logout {
+.btn__edit {
   background-color: transparent;
   border-style: none;
 }
 
-.btn__logout img {
-  width: 100px;
+.btn__edit img {
+  width: 50px;
 }

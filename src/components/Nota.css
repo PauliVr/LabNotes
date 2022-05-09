@@ -1,0 +1,184 @@
+.container__notes {
+  max-width: 1715px;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 35px;
+}
+.note {
+  width: 50%;
+}
+
+.note img {
+  width: 50%;
+}
+
+/* .note {
+  width: 250px;
+  height: 250px;
+  background-color: #d6d9ed;
+  border-radius: 30px;
+  border-color: #bbc2e9;
+} */
+
+.container__note {
+  position: relative;
+  height: 345px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.note__title {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.note__content {
+  width: 280px;
+  margin: 18px 0;
+  line-height: 1.5;
+  color: var(--DeepGray);
+}
+
+.note__info {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  text-align: left;
+}
+
+.note__buttons {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.note__title--Green {
+  color: #22503f;
+}
+.note__title--Blue {
+  color: #58869f;
+}
+.note__title--deepPink {
+  color: #883c63;
+}
+.note__title--Lilac {
+  color: #5d4063;
+}
+.note__title--Orange {
+  color: #a97646;
+}
+.note__title--Peach {
+  color: #927373;
+}
+.note__title--Pink {
+  color: #aa5a74;
+}
+.note__title--Purple {
+  color: #766d8c;
+}
+.note__title--Red {
+  color: #a31f2e;
+}
+.note__title--Yellow {
+  color: #a78a46;
+}
+
+.note__color--borderGreen {
+  background-image: url(../../public/assets/notasGrandes/greenNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderBlue {
+  background-image: url(../../public/assets/notasGrandes/blueNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderdeepPink {
+  background-image: url(../../public/assets/notasGrandes/deepPinkNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderLilac {
+  background-image: url(../../public/assets/notasGrandes/lilacNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderOrange {
+  background-image: url(../../public/assets/notasGrandes/orangeNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderPeach {
+  background-image: url(../../public/assets/notasGrandes/peachNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderPink {
+  background-image: url(../../public/assets/notasGrandes/pinkNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderPurple {
+  background-image: url(../../public/assets/notasGrandes/purpleNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderRed {
+  background-image: url(../../public/assets/notasGrandes/redNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+.note__color--borderYellow {
+  background-image: url(../../public/assets/notasGrandes/yellowNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 23px;
+}
+
+@media (min-width: 1024px) {
+  .container__note {
+    width: 320px;
+  }
+
+  .note__content {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .note__title {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  .note__buttons {
+    width: 270px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}

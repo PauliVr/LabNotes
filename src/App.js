@@ -15,6 +15,7 @@ function App() {
         <Route path='/registro' element={<Register />} />
         <Route path='/' element={<Dashboard />} />
         <Route path='/NuevaNota' element={<NewNote />} />
+        <Route path='/EditarNota/:id' element={<NewNote />} />
         <Route path='/dash' element={<DiseñoDashboard />} />
         <Route path='*' element={<Error404 />} />
       </Routes>

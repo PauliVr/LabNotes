@@ -1,24 +1,31 @@
 .container_dashboardNotes {
   display: flex;
-  flex-direction: row-reverse;
-  /* position: relative; */
   height: 100vh;
 }
 
-.dashboard__containerNotes {
+.bar {
   display: flex;
   flex-direction: row;
   width: 93%;
-  height: 100vh;
+  height: 100%;
+}
+
+.bar__back {
+  width: 100px;
+  position: fixed;
+  top: 0;
+}
+
+.bar__logout {
+  position: fixed;
+  bottom: 0;
 }
 
 .dashboardNotes {
-  height: 100vh;
   width: 100%;
-  font-size: 32px;
-  text-align: center;
-  background-color: white;
-  border-top-left-radius: 115px;
+  height: auto;
+  background: white;
+  border-top-left-radius: 12%;
 }
 
 .dashboard__titleNotes {
@@ -26,37 +33,44 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
 }
 
 .dashboard__title--textNotes {
   color: var(--DeepPink);
-  margin: 40px 0;
-}
-
-.newNote {
-  width: 45%;
+  margin: 25px 0;
 }
 
 .form__note {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 18px;
-  left: 475px;
+  padding: 10px;
+  top: 17%;
+  left: 27%;
+  width: 60%;
 }
 
-.container__notes {
-  position: relative;
+.form__content {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .note__input--title {
-  width: 500px;
-  height: 60px;
+  width: 320px;
+  height: 50px;
 }
 
 .note__textarea--content {
-  height: 350px;
-  width: 650px;
+  height: 250px;
+  width: 400px;
 }
 
 .note__input--title,
@@ -65,54 +79,272 @@
   border-color: none;
   border: none;
   border-radius: 5px;
+  font-size: 25px;
+  align-self: flex-start;
 }
 .note__label {
   text-align: left;
-  margin: 20px 0;
+  align-self: flex-start;
+  margin: 5px 0;
   font-weight: 600;
   color: #ffffff;
+  font-size: 25px;
 }
 
 .note__btn {
   background-color: #ffffff;
   align-self: flex-end;
-  width: 230px;
-  height: 60px;
+  width: 180px;
+  height: 50px;
   border-radius: 39px;
-  font-size: 25px;
-  margin: 35px 0;
-  border: none;
-  color: var(--DeepGray);
+  font-size: 15px;
+  margin: 15px 0;
+  border: 3px solid;
+  font-weight: 600;
 }
 
-.note__btn--borderGreen{
-  border-color:#3B7862;
-}
-.note__btn--borderBlue{
-  border-color:#85BEDC;
-}
-.note__btn--borderdeepPink{
-  border-color:#C75C94
-}
-.note__btn--borderLilac{
-  border-color: #68566C;
-}
-.note__btn--borderOrange{
-  border-color: #DC9A5D;
-}
-.note__btn--borderPeach{
-  border-color: #EBB8B8;
-}
-.note__btn--borderPink{
-  border-color: #D67291;
-}
-.note__btn--borderPurple{
-  border-color: #A093BE;
-}
-.note__btn--borderRed{
-  border-color: #D16470;
-}
-.note__btn--borderYellow{
-  border-color: #D9B35C;
+.note__borderGreen {
+  background-image: url(../../public/assets/notasGrandes/greenNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
+.note__btn--borderGreen {
+  border-color: #3b7862;
+  color: #3b7862;
+}
+
+.note__borderBlue {
+  background-image: url(../../public/assets/notasGrandes/blueNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderBlue {
+  border-color: #85bedc;
+  color: #85bedc;
+}
+
+.note__borderdeepPink {
+  background-image: url(../../public/assets/notasGrandes/deepPinkNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderdeepPink {
+  border-color: #c75c94;
+  color: #c75c94;
+}
+
+.note__borderLilac {
+  background-image: url(../../public/assets/notasGrandes/lilacNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderLilac {
+  border-color: #68566c;
+  color: #68566c;
+}
+
+.note__borderOrange {
+  background-image: url(../../public/assets/notasGrandes/orangeNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderOrange {
+  border-color: #dc9a5d;
+  color: #dc9a5d;
+}
+
+.note__borderPeach {
+  background-image: url(../../public/assets/notasGrandes/peachNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderPeach {
+  border-color: #ebb8b8;
+  color: #ebb8b8;
+}
+
+.note__borderPink {
+  background-image: url(../../public/assets/notasGrandes/pinkNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderPink {
+  border-color: #d67291;
+  color: #d67291;
+}
+
+.note__borderPurple {
+  background-image: url(../../public/assets/notasGrandes/purpleNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderPurple {
+  border-color: #a093be;
+  color: #a093be;
+}
+
+.note__borderRed {
+  background-image: url(../../public/assets/notasGrandes/redNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderRed {
+  border-color: #d16470;
+  color: #d16470;
+}
+
+.note__borderYellow {
+  background-image: url(../../public/assets/notasGrandes/yellowNote.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note__btn--borderYellow {
+  border-color: #d9b35c;
+  color: #d9b35c;
+}
+
+.alert {
+  position: absolute;
+  width: 25%;
+  right: 0;
+  margin: 65px 0;
+}
+
+@media (min-width: 820px) {
+  .dashboard__title--textNotes {
+    margin: 20px 0;
+  }
+  .dashboard__titleNotes {
+    font-size: 35px;
+  }
+
+  .note__input--title {
+    width: 320px;
+  }
+
+  .note__textarea--content {
+    width: 400px;
+  }
+
+  .note__input--title,
+  .note__textarea--content {
+    font-size: 18px;
+  }
+  .note__label {
+    margin: 3px 0;
+    font-size: 25px;
+  }
+
+  .note__btn {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .form__note {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 15px;
+    top: 17%;
+    left: 38%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form__note {
+    width: 32%;
+  }
+
+  .note__input--title {
+    width: 350px;
+    height: 40px;
+  }
+
+  .note__textarea--content {
+    height: 200px;
+    width: 350px;
+  }
+
+  .note__input--title,
+  .note__textarea--content {
+    font-size: 18px;
+  }
+  .note__label {
+    margin: 30px 0;
+    font-size: 30px;
+  }
+
+  .note__btn {
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+    margin: 20px 80px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .dashboardNotes {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .form__note {
+    width: 45%;
+  }
+
+  .note__input--title {
+    width: 390px;
+    height: 60px;
+  }
+
+  .note__textarea--content {
+    height: 250px;
+    width: 495px;
+  }
+
+  .note__input--title,
+  .note__textarea--content {
+    font-size: 18px;
+  }
+  .note__label {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .note__btn {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .form__note {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 15px;
+    top: 15%;
+    left: 33%;
+  }
+
+  .btn__logout img {
+    width: 75px;
+  }
+  .button__back img {
+    width: 75px;
+  }
+  .Alert__text {
+    font-size: 17px;
+    padding: 5px;
+  }
+}

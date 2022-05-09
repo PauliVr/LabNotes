@@ -37,7 +37,7 @@ function Register() {
       </div>
       <div className='register'>
         <button
-          className='button__back'
+          className='button__back--pink'
           onClick={() => {
             navigate('/');
           }}

@@ -1,0 +1,10 @@
+.loader {
+  position: absolute;
+  top: 20px;
+  left: 410px;
+}
+
+.size {
+  width: 50px;
+  align-self: center;
+}
