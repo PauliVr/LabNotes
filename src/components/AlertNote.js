@@ -3,7 +3,7 @@ import './AlertNote.css';
 export default function AlertNote(props) {
   return (
     <div className={'container__Alert ' + props.color}>
-      <img className='Alert__img' src={`./assets/${props.image}.svg`} alt='' />
+      <img className='Alert__img' src={`/assets/${props.image}.svg`} alt='' />
       <p className='Alert__text'>{props.message}</p>
     </div>
   );

@@ -15,8 +15,11 @@ export default function Dashboard() {
   const [notas, setNotas] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const [onDelete, setOnDelete] = useState(false);
+  const [deleteId, setDeleteId] = useState('');
 
   //se ejecuta al cambiar esta o renderiza por primera vez
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (!user) {
@@ -26,17 +29,23 @@ export default function Dashboard() {
           .then((snapshot) => {
             if (snapshot.length > 0) {
               console.log(snapshot);
+              setLoading(false);
               setNotas(snapshot);
+            } else {
+              setNotas([]);
             }
-
-            setLoading(false);
           })
           .catch((e) => {
             console.log(e);
           });
       }
     });
-  }, []);
+  }, [onDelete]);
+
+  function deleteStateChange(newState, id) {
+    setOnDelete(newState);
+    setDeleteId(id);
+  }
 
   return (
     <section className='container_dashboard'>
@@ -55,13 +64,14 @@ export default function Dashboard() {
           <img src='./assets/estrellita.svg' alt='' />
         </div>
         <div className='container__notes'>
-          {notas.length > 0 ? (
+          {!loading ? (
             notas?.map((doc) => (
               <Note
                 id={doc.id}
                 title={doc.infoNote.title}
                 content={doc.infoNote.content}
                 date={doc.infoNote.registerDay}
+                delete={deleteStateChange}
               />
             ))
           ) : (
@@ -69,7 +79,7 @@ export default function Dashboard() {
           )}
         </div>
       </div>
-      <Modal />
+      {onDelete ? <Modal delete={setOnDelete} id={deleteId} /> : ''}
     </section>
   );
 }

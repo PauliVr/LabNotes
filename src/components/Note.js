@@ -3,7 +3,6 @@ import '../globalStyles.css';
 import ButtonDelete from './ButtonDelete';
 import ButtonEdit from './ButtonEdit';
 
-
 const color = [
   {
     noteColor: 'note__color--borderGreen',
@@ -59,9 +58,8 @@ export default function Note(props) {
         <h5 className={randomTitleColor}>{props.date}</h5>
       </div>
       <div className='note__buttons '>
-        <ButtonDelete />
-        <ButtonEdit 
-        id={props.id} />
+        <ButtonDelete delete={props.delete} id={props.id} />
+        <ButtonEdit id={props.id} />
       </div>
     </div>
   );

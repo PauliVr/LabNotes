@@ -48,6 +48,7 @@
 
 .container__notes img {
   width: 120%;
+  grid-column: 2/3;
 }
 
 .btn__add {

@@ -9,7 +9,7 @@ export default function ButtonBack() {
         navigate('/');
       }}
     >
-      <img className='button__back--img' src='assets/ArrowWithe.svg' alt='' />
+      <img className='button__back--img' src='/assets/ArrowWithe.svg' alt='' />
     </button>
   );
 }

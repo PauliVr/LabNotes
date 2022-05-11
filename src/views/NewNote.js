@@ -8,6 +8,8 @@ import { saveNote, getUserNote, updateNote, auth } from '../firebase/firebase';
 import AlertNote from '../components/AlertNote';
 import { useEffect, useState } from 'react';
 
+console.log(window.location);
+
 const colors = [
   {
     note: 'note__btn--borderGreen',
@@ -55,7 +57,7 @@ const indexNoteColor = Math.floor(Math.random() * colors.length);
 const randomNoteColor = colors[indexNoteColor].note;
 const randomBtnColor = colors[indexNoteColor].button;
 
-export default function NewNote() {
+export default function NewNote(props) {
   const { values, alertString, valueChange, handleChange, handleSubmit } =
     useFormNote(formRegisterNote);
   const [alert, setAlert] = useState('');
@@ -128,9 +130,9 @@ export default function NewNote() {
       </div>
       <div className='dashboardNotes'>
         <div className='dashboard__titleNotes'>
-          <img src='./assets/estrellita.svg' alt='' />
-          <h1 className='dashboard__title--textNotes'>Nueva Nota</h1>
-          <img src='./assets/estrellita.svg' alt='' />
+          <img src='/assets/estrellita.svg' alt='' />
+          <h1 className='dashboard__title--textNotes'>{props.title}</h1>
+          <img src='/assets/estrellita.svg' alt='' />
         </div>
         <div className='container__newnote'>
           <form className={'form__note ' + randomNoteColor} onSubmit={handleSubmit}>

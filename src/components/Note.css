@@ -28,33 +28,52 @@
   position: relative;
   height: 345px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .note__title {
+  max-height: 75px;
+  overflow-y: scroll;
   font-size: 30px;
-  margin: 20px 0;
+  margin: 0px 0;
+  max-width: 260px;
+}
+
+.note__title::-webkit-scrollbar {
+  display: none;
 }
 
 .note__content {
+  max-height: 110px;
+  max-width: 300px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
   width: 280px;
   margin: 18px 0;
   line-height: 1.5;
-  color: var(--DeepGray);
+  color: var(--Gray);
+  box-shadow: inset 0px -10px 10px -12px rgba(0, 0, 0, 0.25);
+}
+
+.note__content::-webkit-scrollbar {
+  display: none;
 }
 
 .note__info {
-  position: absolute;
+  /* position: absolute;
   top: 50px;
-  left: 20px;
+  left: 20px; */
   text-align: left;
 }
 
 .note__buttons {
-  width: 50px;
-  height: 50px;
+  /* width: 50px;
+  height: 50px; */
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .note__title--Green {

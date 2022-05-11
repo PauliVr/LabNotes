@@ -14,8 +14,8 @@ function App() {
         <Route path='/login' element={<LogIn />} />
         <Route path='/registro' element={<Register />} />
         <Route path='/' element={<Dashboard />} />
-        <Route path='/NuevaNota' element={<NewNote />} />
-        <Route path='/EditarNota/:id' element={<NewNote />} />
+        <Route path='/nuevaNota' element={<NewNote title='Nueva Nota' />} />
+        <Route path='/editarNota/:id' element={<NewNote title='Editar Nota' />} />
         <Route path='/dash' element={<DiseñoDashboard />} />
         <Route path='*' element={<Error404 />} />
       </Routes>

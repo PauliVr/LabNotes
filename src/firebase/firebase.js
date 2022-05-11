@@ -174,3 +174,6 @@ export async function updateNote(id, title, content) {
   return alert;
 }
 
+export default function deleteNote(id) {
+  const deleted = deleteDoc(doc(db, 'notes', id));
+}
