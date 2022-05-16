@@ -10,7 +10,7 @@ export default function ButtonDelete(props) {
         props.delete(true, props.id);
       }}
     >
-      <img src='./assets/delete.svg' alt='' />
+      <img src='./assets/delete.svg' alt='IconDelete' />
     </button>
   );
 }

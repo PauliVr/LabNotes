@@ -6,7 +6,7 @@ function ButtonAddNote() {
 
   return (
     <button className='btn__addnote' onClick={() => navigate('/nuevaNota')}>
-      <img src='./assets/addIcon.svg' alt='' />
+      <img src='./assets/addIcon.svg' alt='IconAdd' />
     </button>
   );
 }

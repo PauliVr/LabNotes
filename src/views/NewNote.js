@@ -130,9 +130,9 @@ export default function NewNote(props) {
       </div>
       <div className='dashboardNotes'>
         <div className='dashboard__titleNotes'>
-          <img src='/assets/estrellita.svg' alt='' />
+          <img src='/assets/estrellita.svg' alt='IconStar' />
           <h1 className='dashboard__title--textNotes'>{props.title}</h1>
-          <img src='/assets/estrellita.svg' alt='' />
+          <img src='/assets/estrellita.svg' alt='IconStar' />
         </div>
         <div className='container__newnote'>
           <form className={'form__note ' + randomNoteColor} onSubmit={handleSubmit}>

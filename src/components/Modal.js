@@ -23,9 +23,9 @@ export default function Modal(props) {
             props.delete(false, '');
           }}
         >
-          <img className='modal__img' src='./assets/close.svg' alt='' />
+          <img className='modal__img' src='./assets/close.svg' alt='IconClose' />
         </button>
-        <img className='modal__img' src='./assets/GatoAlert.svg' alt='' />
+        <img className='modal__img' src='./assets/GatoAlert.svg' alt='AstoCat' />
         <h3 className='modal__title'>¿Estas segur@ que quieres eliminar la nota?</h3>
         <p className='modal__text'>* Al eliminar la nota no podrás recuperarla * </p>
         <div className='modal__btns'>

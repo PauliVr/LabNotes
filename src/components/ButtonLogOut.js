@@ -13,7 +13,7 @@ export default function ButtonLogOut() {
 
   return (
     <button className='btn__logout' onClick={logOut}>
-      <img src='/assets/Log_Out.svg' alt='' />
+      <img src='/assets/Log_Out.svg' alt='iconLogOut' />
     </button>
   );
 }

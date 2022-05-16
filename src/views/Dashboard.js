@@ -7,13 +7,13 @@ import { useEffect, useState } from 'react';
 import ButtonLogOut from '../components/ButtonLogOut';
 import Note from '../components/Note';
 import ButtonAddNote from '../components/ButtonAddNote';
-import ButtonBack from '../components/ButtonBack';
 import Loader from '../components/Loader';
 import Modal from '../components/Modal';
+import FirstNote from '../components/FirstNote';
 
 export default function Dashboard() {
   const [notas, setNotas] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(0);
   const navigate = useNavigate();
   const [onDelete, setOnDelete] = useState(false);
   const [deleteId, setDeleteId] = useState('');
@@ -29,9 +29,10 @@ export default function Dashboard() {
           .then((snapshot) => {
             if (snapshot.length > 0) {
               console.log(snapshot);
-              setLoading(false);
+              setLoading(1);
               setNotas(snapshot);
             } else {
+              setLoading(2);
               setNotas([]);
             }
           })
@@ -59,12 +60,12 @@ export default function Dashboard() {
       </div>
       <div className='notes__container'>
         <div className='dashboard__title'>
-          <img src='./assets/estrellita.svg' alt='' />
+          <img src='./assets/estrellita.svg' alt='IconStar' />
           <h1 className='dashboard__title--text'>Mi Espacio</h1>
-          <img src='./assets/estrellita.svg' alt='' />
+          <img src='./assets/estrellita.svg' alt='IconStar' />
         </div>
         <div className='container__notes'>
-          {!loading ? (
+          {loading ===1 ? (
             notas?.map((doc) => (
               <Note
                 id={doc.id}
@@ -74,6 +75,8 @@ export default function Dashboard() {
                 delete={deleteStateChange}
               />
             ))
+          ) : loading === 2 ?(
+            <FirstNote/>
           ) : (
             <Loader size />
           )}

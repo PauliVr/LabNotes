@@ -51,7 +51,7 @@ export default function Note(props) {
   const randomNoteColor = color[indexNoteColor].noteColor;
   const randomTitleColor = color[indexNoteColor].title;
   return (
-    <div className={'container__note ' + randomNoteColor}>
+    <section className={'container__note ' + randomNoteColor}>
       <div className='note__info '>
         <h3 className={'note__title ' + randomTitleColor}>{props.title}</h3>
         <p className='note__content '>{props.content}</p>
@@ -61,6 +61,6 @@ export default function Note(props) {
         <ButtonDelete delete={props.delete} id={props.id} />
         <ButtonEdit id={props.id} />
       </div>
-    </div>
+    </section>
   );
 }

@@ -3,11 +3,8 @@
   height: 100vh;
 }
 
-.bar {
-  display: flex;
-  flex-direction: row;
-  width: 93%;
-  height: 100%;
+.bar img {
+  margin: 25px 0;
 }
 
 .bar__back {

@@ -33,7 +33,7 @@ function Register() {
   return (
     <section className='container_register'>
       <div className='heroRegister'>
-        <img src='./assets/abduction.svg' alt='' className='heroRegister__img' />
+        <img src='./assets/abduction.svg' alt='IconAbduction' className='heroRegister__img' />
       </div>
       <div className='register'>
         <button
@@ -42,12 +42,12 @@ function Register() {
             navigate('/');
           }}
         >
-          <img src='./assets/arrow.svg' alt='' />
+          <img src='./assets/arrow.svg' alt='IconArrowBack' />
         </button>
         <div className='register__title-container'>
-          <img src='./assets/estrellita.svg' alt='' />
+          <img src='./assets/estrellita.svg' alt='IconStar' />
           <h2 className='register__title'>REGISTRO</h2>
-          <img src='./assets/estrellita.svg' alt='' />
+          <img src='./assets/estrellita.svg' alt='IconStar' />
         </div>
         <form className='register_form' onSubmit={handleSubmit}>
           <div className='form__input mg'>

@@ -58,13 +58,13 @@ function LogIn() {
       <div className='login'>
         <div className='login__content'>
           <div className='login__title--container'>
-            <img src='./assets/estrellita.svg' alt='' />
+            <img src='./assets/estrellita.svg' alt='IconStar' />
             <h2 className='login__title'>INICIAR SESIÓN</h2>
-            <img src='./assets/estrellita.svg' alt='' />
+            <img src='./assets/estrellita.svg' alt='IconStar' />
           </div>
           <form onSubmit={handleSubmit} className='form'>
             <div className='form__group'>
-              <img src='https://svgshare.com/i/g6x.svg' alt='' className='form__icon' />
+              <img src='https://svgshare.com/i/g6x.svg' alt='IconPeople' className='form__icon' />
               <div className='form__input'>
                 <input
                   name='email'
@@ -82,7 +82,7 @@ function LogIn() {
               </div>
             </div>
             <div className='form__group'>
-              <img src='https://svgshare.com/i/g6y.svg' alt='' className='form__icon' />
+              <img src='https://svgshare.com/i/g6y.svg' alt='IconPassword' className='form__icon' />
               <div className='form__input'>
                 <input
                   name='password'
@@ -115,15 +115,15 @@ function LogIn() {
       <div className='hero'>
         <h1 className='hero__title'>SpaceNotes</h1>
         <div className='hero__slogan'>
-          <img src='./assets/MoonIcon.svg' alt='' className='hero__icon' />
+          <img src='./assets/MoonIcon.svg' alt='IconMoon' className='hero__icon' />
           <h3 className='hero__text'>“ El espacio para organizar tu vida ” </h3>
-          <img src='./assets/PlanetIcon.svg' alt='' className='hero__icon' />
+          <img src='./assets/PlanetIcon.svg' alt='IconPlanets' className='hero__icon' />
         </div>
-        <img src='./assets/nebulousstars.svg' alt='' className='hero__img' />
-        <img src='./assets/planets1.svg' alt='' className='hero__img' />
-        <img src='./assets/ship.svg' alt='' className='hero__img' />
-        <img src='./assets/themoon.svg' alt='' className='hero__img' />
-        <img src='./assets/saturn.svg' alt='' className='hero__img' />
+        <img src='./assets/nebulousstars.svg' alt='IconNebulous' className='hero__img' />
+        <img src='./assets/planets1.svg' alt='IconSaturn' className='hero__img' />
+        <img src='./assets/ship.svg' alt='IconSpaceShip' className='hero__img' />
+        <img src='./assets/themoon.svg' alt='IconMon' className='hero__img' />
+        <img src='./assets/saturn.svg' alt='IconNepturn' className='hero__img' />
       </div>
     </section>
   );

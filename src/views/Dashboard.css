@@ -51,6 +51,14 @@
   grid-column: 2/3;
 }
 
+.container__notes .aliens__img{
+  width: 200%;
+}
+
+.aliens__text{
+  grid-column: 2/3;
+}
+
 .btn__add {
   width: 100px;
   position: fixed;
@@ -76,5 +84,8 @@
   }
   .btn__addnote img {
     width: 60px;
+  }
+  .container__notes .aliens__img {
+  width: 160%;
   }
 }
