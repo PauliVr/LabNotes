@@ -1,7 +1,7 @@
 import '../globalStyles.css';
 import './Error404.css';
 
-function Error404() {
+export default function Error404() {
   return (
     <div className='container__error'>
       <div className='error__hero'>
@@ -10,5 +10,3 @@ function Error404() {
     </div>
   );
 }
-
-export default Error404;

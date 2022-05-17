@@ -26,10 +26,34 @@
 
 .container__note {
   position: relative;
-  height: 345px;
+  height: 340px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.container__note::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 80px;
+  height: 80px;
+  border-bottom-left-radius: 8px;
+}
+
+.container__note::after {
+  content: '';
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  width: 0px;
+  height: 0px;
+
+  border-top: 100px solid white;
+  border-left: 100px solid transparent;
 }
 
 .note__title {
@@ -61,19 +85,16 @@
 }
 
 .note__info {
-  /* position: absolute;
-  top: 50px;
-  left: 20px; */
   text-align: left;
+  z-index: 1;
 }
 
 .note__buttons {
-  /* width: 50px;
-  height: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 12px;
+  z-index: 1;
+  margin-top: 8px;
 }
 
 .note__title--Green {
@@ -108,73 +129,92 @@
 }
 
 .note__color--borderGreen {
-  background-image: url(../../public/assets/notasGrandes/greenNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 23px;
+  background-color: #60c19e;
+  border: 3px solid #3b7862;
+}
+.note__color--borderGreen::before {
+  background-color: #3b7862;
 }
 
 .note__color--borderBlue {
-  background-image: url(../../public/assets/notasGrandes/blueNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #9adcff;
+  border: 3px solid #85bedc;
   padding: 23px;
+}
+.note__color--borderBlue::before {
+  background-color: #85bedc;
 }
 
 .note__color--borderdeepPink {
-  background-image: url(../../public/assets/notasGrandes/deepPinkNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #d880a6;
+  border: 3px solid #c75c93;
   padding: 23px;
+}
+.note__color--borderdeepPink::before {
+  background-color: #c75c93;
 }
 
 .note__color--borderLilac {
-  background-image: url(../../public/assets/notasGrandes/lilacNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #a68dad;
+  border: 3px solid #68566c;
   padding: 23px;
+}
+.note__color--borderLilac:before {
+  background-color: #68566c;
 }
 
 .note__color--borderOrange {
-  background-image: url(../../public/assets/notasGrandes/orangeNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #ffb470;
+  border: 3px solid #dc9a5d;
   padding: 23px;
+}
+.note__color--borderOrange::before {
+  background-color: #dc9a5d;
 }
 
 .note__color--borderPeach {
-  background-image: url(../../public/assets/notasGrandes/peachNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #ffc7c7;
+  border: 3px solid #ebb8b8;
   padding: 23px;
+}
+.note__color--borderPeach::before {
+  background-color: #ebb8b8;
 }
 
 .note__color--borderPink {
-  background-image: url(../../public/assets/notasGrandes/pinkNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #ff8aae;
+  border: 3px solid #d67291;
   padding: 23px;
+}
+.note__color--borderPink::before {
+  background-color: #d67291;
 }
 
 .note__color--borderPurple {
-  background-image: url(../../public/assets/notasGrandes/purpleNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #baabda;
+  border: 3px solid #a193be;
   padding: 23px;
+}
+.note__color--borderPurple::before {
+  background-color: #a193be;
 }
 
 .note__color--borderRed {
-  background-image: url(../../public/assets/notasGrandes/redNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #f67280;
+  border: 3px solid #d16470;
   padding: 23px;
+}
+.note__color--borderRed::before {
+  background-color: #d16470;
 }
 
 .note__color--borderYellow {
-  background-image: url(../../public/assets/notasGrandes/yellowNote.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #ffd36e;
+  border: 3px solid #d9b35c;
   padding: 23px;
+}
+.note__color--borderYellow::before {
+  background-color: #d9b35c;
 }
 
 @media (min-width: 1024px) {
@@ -198,6 +238,5 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
   }
 }

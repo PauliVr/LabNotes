@@ -1,6 +1,7 @@
 .button__delete {
   background-color: transparent;
   border-style: none;
+  color: transparent;
 }
 .button__delete img {
   width: 50px;

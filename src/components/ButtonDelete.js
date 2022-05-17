@@ -1,6 +1,4 @@
-import { useNavigate } from 'react-router-dom';
 import './ButtonDelete.css';
-import Modal from './Modal';
 
 export default function ButtonDelete(props) {
   return (
@@ -10,6 +8,7 @@ export default function ButtonDelete(props) {
         props.delete(true, props.id);
       }}
     >
+      Eliminar
       <img src='./assets/delete.svg' alt='IconDelete' />
     </button>
   );

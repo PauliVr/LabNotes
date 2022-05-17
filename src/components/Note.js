@@ -55,11 +55,13 @@ export default function Note(props) {
       <div className='note__info '>
         <h3 className={'note__title ' + randomTitleColor}>{props.title}</h3>
         <p className='note__content '>{props.content}</p>
-        <h5 className={randomTitleColor}>{props.date}</h5>
       </div>
-      <div className='note__buttons '>
-        <ButtonDelete delete={props.delete} id={props.id} />
-        <ButtonEdit id={props.id} />
+      <div className='note__footer'>
+        <h5 className={randomTitleColor}>{props.date}</h5>
+        <div className='note__buttons '>
+          <ButtonDelete delete={props.delete} id={props.id} />
+          <ButtonEdit id={props.id} />
+        </div>
       </div>
     </section>
   );

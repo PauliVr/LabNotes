@@ -45,7 +45,29 @@
   padding: 10px;
   top: 17%;
   left: 27%;
-  /* width: 60%; */
+  border-radius: 12px;
+}
+
+.form__note::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+  border-bottom-left-radius: 8px;
+}
+
+.form__note::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 0px;
+  height: 0px;
+  
+  border-top: 110px solid white;
+  border-left: 110px solid transparent;
 }
 
 .form__content {
@@ -101,7 +123,98 @@
 }
 
 .note__borderGreen {
-  background-image: url(../../public/assets/notasGrandes/greenNote.svg);
+  background-color: #60C19E;
+  border: 3px solid #3B7862;
+}
+.note__borderGreen::before {
+  background-color: #3B7862;
+}
+
+.note__borderBlue {
+  background-color: #9ADCFF;
+  border: 3px solid #85BEDC;
+  padding: 23px;
+}
+.note__borderBlue::before {
+  background-color:#85BEDC;
+}
+
+.note__borderdeepPink {
+  background-color: #D880A6;
+  border: 3px solid #C75C93;
+  padding: 23px;
+}
+.note__borderdeepPink::before {
+  background-color: #C75C93;
+}
+
+.note__borderLilac {
+  background-color: #A68DAD;
+  border: 3px solid #68566C;
+  padding: 23px;
+}
+.note__borderLilac:before {
+  background-color: #68566C;
+}
+
+
+.note__borderOrange {
+  background-color: #FFB470;
+  border: 3px solid #DC9A5D;
+  padding: 23px;
+}
+.note__borderOrange::before {
+  background-color: #DC9A5D;
+}
+
+.note__borderPeach {
+  background-color: #FFC7C7;
+  border: 3px solid #EBB8B8;
+  padding: 23px;
+}
+.note__borderPeach::before {
+  background-color: #EBB8B8
+}
+
+.note__borderPink {
+  background-color: #FF8AAE;
+  border: 3px solid #D67291;
+  padding: 23px;
+}
+.note__borderPink::before {
+  background-color: #D67291;
+}
+
+.note__borderPurple {
+  background-color: #BAABDA;
+  border: 3px solid #A193BE;
+  padding: 23px;
+}
+.note__borderPurple::before {
+  background-color: #A193BE;
+}
+
+.note__borderRed {
+  background-color: #F67280;
+  border: 3px solid #D16470;
+  padding: 23px;
+}
+.note__borderRed::before {
+  background-color: #D16470;
+}
+
+.note__borderYellow {
+  background-color: #FFD36E;
+  border: 3px solid #D9B35C;
+  padding: 23px;
+}
+.note__borderYellow::before {
+  background-color: #D9B35C;
+}
+
+
+.note__borderGreen {
+  /* background-image: url(../../public/assets/notasGrandes/greenNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -112,7 +225,7 @@
 }
 
 .note__borderBlue {
-  background-image: url(../../public/assets/notasGrandes/blueNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/blueNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -123,7 +236,7 @@
 }
 
 .note__borderdeepPink {
-  background-image: url(../../public/assets/notasGrandes/deepPinkNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/deepPinkNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -134,7 +247,7 @@
 }
 
 .note__borderLilac {
-  background-image: url(../../public/assets/notasGrandes/lilacNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/lilacNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -145,7 +258,7 @@
 }
 
 .note__borderOrange {
-  background-image: url(../../public/assets/notasGrandes/orangeNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/orangeNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -156,7 +269,7 @@
 }
 
 .note__borderPeach {
-  background-image: url(../../public/assets/notasGrandes/peachNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/peachNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -167,7 +280,7 @@
 }
 
 .note__borderPink {
-  background-image: url(../../public/assets/notasGrandes/pinkNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/pinkNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -178,7 +291,7 @@
 }
 
 .note__borderPurple {
-  background-image: url(../../public/assets/notasGrandes/purpleNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/purpleNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -189,7 +302,7 @@
 }
 
 .note__borderRed {
-  background-image: url(../../public/assets/notasGrandes/redNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/redNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -200,7 +313,7 @@
 }
 
 .note__borderYellow {
-  background-image: url(../../public/assets/notasGrandes/yellowNote.svg);
+  /* background-image: url(../../public/assets/notasGrandes/yellowNote.svg); */
   background-repeat: no-repeat;
   background-size: contain;
 }
