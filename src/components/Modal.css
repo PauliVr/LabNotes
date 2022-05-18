@@ -15,6 +15,7 @@
   align-self: center;
   width: 450px;
   height: 550px;
+  z-index: 2;
 }
 
 .modal__img {
@@ -26,6 +27,7 @@
   background-color: transparent;
   border-style: none;
   align-self: flex-end;
+  color: transparent;
   padding: 15px 25px;
 }
 

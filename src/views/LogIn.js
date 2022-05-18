@@ -33,7 +33,7 @@ function LogIn() {
   async function handleClick() {
     const googleProvider = new GoogleAuthProvider();
     try {
-      const res = await signInWithPopup(auth, googleProvider);
+      await signInWithPopup(auth, googleProvider);
     } catch (error) {
       console.error(error);
     }
@@ -64,7 +64,7 @@ function LogIn() {
           </div>
           <form onSubmit={handleSubmit} className='form'>
             <div className='form__group'>
-              <img src='https://svgshare.com/i/g6x.svg' alt='IconPeople' className='form__icon' />
+              <img src='/assets/UserIcon.svg' alt='IconPeople' className='form__icon' />
               <div className='form__input'>
                 <input
                   name='email'
@@ -82,7 +82,7 @@ function LogIn() {
               </div>
             </div>
             <div className='form__group'>
-              <img src='https://svgshare.com/i/g6y.svg' alt='IconPassword' className='form__icon' />
+              <img src='/assets/LockIcon.svg' alt='IconPassword' className='form__icon' />
               <div className='form__input'>
                 <input
                   name='password'

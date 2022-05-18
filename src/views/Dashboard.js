@@ -2,7 +2,7 @@ import '../globalStyles.css';
 import './Dashboard.css';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, getNote } from '../firebase/firebase';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ButtonLogOut from '../components/ButtonLogOut';
 import Note from '../components/Note';
@@ -41,7 +41,7 @@ export default function Dashboard() {
           });
       }
     });
-  }, [onDelete]);
+  }, [onDelete, navigate]);
 
   function deleteStateChange(newState, id) {
     setOnDelete(newState);
@@ -65,7 +65,7 @@ export default function Dashboard() {
           <img src='./assets/estrellita.svg' alt='IconStar' />
         </div>
         <div className='container__notes'>
-          {loading ===1 ? (
+          {loading === 1 ? (
             notas?.map((doc) => (
               <Note
                 id={doc.id}
@@ -75,8 +75,8 @@ export default function Dashboard() {
                 delete={deleteStateChange}
               />
             ))
-          ) : loading === 2 ?(
-            <FirstNote/>
+          ) : loading === 2 ? (
+            <FirstNote />
           ) : (
             <Loader size />
           )}

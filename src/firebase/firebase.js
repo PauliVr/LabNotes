@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { confirmPasswordReset, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import { getStorage, ref, uploadBytes, getDownloadURL, getBytes } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
 import {
   getFirestore,
   collection,
@@ -12,8 +11,6 @@ import {
   setDoc,
   deleteDoc,
 } from 'firebase/firestore';
-import { useParams } from 'react-router-dom';
-import { async } from '@firebase/util';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAF69GlD9YNy106CYWYcGm9FqKYOap70KM',
@@ -96,7 +93,7 @@ export async function saveNote(title, content, uid) {
   let registerDay = day + ' ' + time;
   try {
     const noteCollection = collection(db, 'notes');
-    const docRef = await addDoc(noteCollection, {
+    await addDoc(noteCollection, {
       title,
       content,
       registerDay,
@@ -175,5 +172,5 @@ export async function updateNote(id, title, content) {
 }
 
 export default function deleteNote(id) {
-  const deleted = deleteDoc(doc(db, 'notes', id));
+  deleteDoc(doc(db, 'notes', id));
 }

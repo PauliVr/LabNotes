@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import '../globalStyles.css';
 import './NewNote.css';
 import ButtonLogOut from '../components/ButtonLogOut';
@@ -58,8 +59,7 @@ const randomNoteColor = colors[indexNoteColor].note;
 const randomBtnColor = colors[indexNoteColor].button;
 
 export default function NewNote(props) {
-  const { values, alertString, valueChange, handleChange, handleSubmit } =
-    useFormNote(formRegisterNote);
+  const { values, valueChange, handleChange, handleSubmit } = useFormNote(formRegisterNote);
   const [alert, setAlert] = useState('');
   const navigate = useNavigate();
   const { id } = useParams('');
@@ -67,14 +67,10 @@ export default function NewNote(props) {
   let obj = {};
   useEffect(() => {
     async function editNote() {
-      console.log(2);
-      let editValues;
       if (id) {
         obj = await getUserNote(id);
-        console.log(obj);
         valueChange(obj);
       }
-      console.log(3);
     }
     editNote();
   }, []);
