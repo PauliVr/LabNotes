@@ -53,7 +53,7 @@ Para lograr que el prototipo fuera claro y funcional se realizo e proceso de Des
 
 - **Idear**: Aquí se creo el primer prototipo en papel el cual fue una guía de como quedaría la interfaz de acuerdo a componentes y elementos, posteriormente se pidió feedback a otros usuarios para mejorar el prototipo, en este feedback obtuvimos: Dejar las categorías al final del proyecto, Estandarizar el diseño del login con el inicio de sesión, cambiar las quotes por un elemento gráfico y darle identidad al proyecto.
 
-![PrototipoBajaFidelidad](/public/assets/Prototipo.png)
+![PrototipoBajaFidelidad](/public/assets/prototipo.png)
 
 - **Prototipar**: Se realizó un prototipo en Figma el cual representa de manera visual el producto final de la página, esta fue la base para que pudiera comenzar a maquetar el sistema en HTML, CSS así como la realización de los componentes en React
 
