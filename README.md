@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+<h1 align='center'> 🌠SpaceNotes🌠 </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="https://img.shields.io/badge/SpaceNotes-Paulette_Villegas-purple?style=for-the-badge"/> 
+</p>
 
-## Available Scripts
+![](/public/assets/login.png)
 
-In the project directory, you can run:
+<h3 align='center'> Tecnologías usadas en este proyecto: </h3>
+<p align='center'><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+  <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a></p>
 
-### `npm start`
+### SpaceNotes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p> SpaceNotes es una single page application donde los usuarios pueden iniciar sesión en la aplicación con su usuario o con una cuenta de Google así como registrarse con correo electrónico y contraseña, dentro de SpaceNotes el usuario puede crear notas, editarlas y borrarlas, dichas notas se crean con colores aleatorios, y contienen un título, contenido y la fecha en la que fué creada la nota. </p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Usuario
 
-### `npm test`
+<p>El usuario principal de SpaceNotes es cualquier persona que quiera tener sus notas, listas, tareas e incluso frases motivadoras, en un espacio seguro y personal, esto con la finalidad de tenerlas disponibles en cualquier lugar y poder acceder a ellas por medio de su página web </p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+ <a href="https://space-notes-paulivrr.netlify.app/login" target="_blank">
+  <img src="https://img.shields.io/badge/Ir_A_SpaceNotes-pink?style=for-the-badge">
+</a> 
+</p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ¿Qué problema resuelve? 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>Le permite a los usuarios crear notas y evitar así que olvide tareas, eventos, listas o cosas importantes, para ello SpaceNotes brinda un espacio en el que se pueden crear notas para evitar olvidarlas </p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Enfoques del proyecto
 
-### `npm run eject`
+### UX
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para realizar dicho sistema se llevó a cabo un prototipo de baja fidelidad con el que se buscaba:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Brindarle al usuario una interfaz fácil de comprender y visualmente atractiva 
+- Un flujo de pantallas optimo y coherente de acuerdo a una SPA (single page application)
+- Un prototipo que pudiera ser iterable y creativo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para lograr que el prototipo fuera claro y funcional se realizo e proceso de Design Thinking con un usuario:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Empatizar**: Consistió en entender el problema que se nos había planteado y posteriormente se realizó una plática de aproximadamente 10 minutos con un usuario, el cual brindo información valiosa para entender que flujo de trabajo sería adecuado para dicha aplicación. Otro recurso que fué clave para entender el flujo de proyecto fueron las Historias de usuario que permitieron entender que eran las actividades que seguiría el usuario 
 
-## Learn More
+![MoodBoard](/public/assets/HU.svg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Definir**: Con la información brindada por el usuario se definió un moodboard visual para la UI del sistema y se listaron los elementos que podría formar parte del sistema. En esté punto se definieron recursos visuales, colores, fuentes y tamaños de letra, así como referencias que le dieran identidad visual al proyecto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![MoodBoard](/public/assets/Moodboard.svg)
 
-### Code Splitting
+- **Idear**: Aquí se creo el primer prototipo en papel el cual fue una guía de como quedaría la interfaz de acuerdo a componentes y elementos, posteriormente se pidió feedback a otros usuarios para mejorar el prototipo, en este feedback obtuvimos: Dejar las categorías al final del proyecto, Estandarizar el diseño del login con el inicio de sesión, cambiar las quotes por un elemento gráfico y darle identidad al proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![PrototipoBajaFidelidad](/public/assets/Prototipo.png)
 
-### Analyzing the Bundle Size
+- **Prototipar**: Se realizó un prototipo en Figma el cual representa de manera visual el producto final de la página, esta fue la base para que pudiera comenzar a maquetar el sistema en HTML, CSS así como la realización de los componentes en React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="center">
+ <a href="https://www.figma.com/file/NqfXvHzb09pD4sxaCdKfmb/SpaceNotes?node-id=116%3A106" target="_blank">
+  <img src="https://img.shields.io/badge/Ir_A_Prototipo_En_Figma-purple?style=for-the-badge">
+</a> 
+</p>
 
-### Making a Progressive Web App
+![PrototipoBajaFidelidad](/public/assets/register.svg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Probar**: Las pruebas se generaron mientras se le daba funcionalidad al sistema y como complemento se le pidió a un usuario probar la interfaz para poder observar el flujo de trabajo con ella, obteniendo un buen resultado de usabilidad.
 
-### Advanced Configuration
+- **Feedback**: al tener avanzado el sistema se realizaron 5 Demos en la que las mejoras que se debía hacer eran: Líneas de inputs son muy gruesas, agregar el botón de google, cambiar el color del texto del placeholder, verificar en accesibilidad el contraste de colores con lighthouse y posicionar los botones de eliminar y editar más separados. Todo el feedback fué integrado para mejorar el proyecto.
+![PrototipoBajaFidelidad](/public/assets/nota.svg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Prototipo final
 
-### Deployment
+![](/public/spacenotes.gif.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Tecnologías
+### (Techs Skills)
+👩🏻‍💻 [_Github Projoects_](https://github.com/PauliVr/LabNotes/projects/1)\
+👩🏻‍💻 [_Figma_](https://www.figma.com/file/NqfXvHzb09pD4sxaCdKfmb/SpaceNotes?node-id=116%3A106)\
+👩🏻‍💻 React\
+👩🏻‍💻 React Router\
+👩🏻‍💻 React Testing Library\
+👩🏻‍💻 HTML\
+👩🏻‍💻 CSS / CSS imports \
+👩🏻‍💻 JS/ JSX\
+👩🏻‍💻 Firebase\
+👩🏻‍💻 Jest
 
-### `npm run build` fails to minify
+## Conocimientos reforzados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🖥 HTML semántico \
+🖥 CSS (Flexbox CSS, CSS Grid, selectores de CSS)\
+🖥 Box Model\
+🖥 Responsive Web Design\
+🖥 Uso de funciones\
+🖥 Manipulación dinámica del DOM \
+🖥 Selectores y eventos del DOM\
+🖥 Ciclos (ForEach)\
+🖥 Condicionales (If)\
+🖥 Array Metods (.filter, .map)\
+🖥 Uso de Strings, Array y Objetos\
+🖥 Manejo de Data por medio de Firebase\
+🖥 Uso de datos primitivos\
+🖥 Pruebas unitarias y de integración con Jest
+
+## Conocimientos adquiridos
+
+💻 CSS BEM \
+💻 React \
+💻 React Router \
+💻 React Testing Library \
+💻 Firebase \
+💻 Autenticación Firebase \
+💻 Inicio de sesión con proveedores Firebase\
+💻 Firestore \
+💻 Ruteo SPA (Single Page Aplication) \
+💻 Pruebas asíncronas \
+💻 Promesas \
+💻 Async - await \
+💻 Git Tags 
+
+### EXTRAS
+
+🎨 Conceptos de UI/UX\
+🎨 Manejo de Figma\
+🎨 Markdown
+
+## Habilidades blandas 
+### (Life Skills)
+💪🏻 Colaboración\
+💪🏻 Profesionalismo\
+💪🏻 Resolución de problemas\
+💪🏻 Resiliencia\
+💪🏻 Comunicación eficaz
+
+## Autora 
+
+👩🏼‍💻 PAULETTE VILLEGAS - https://github.com/PauliVr \
+
