@@ -63,7 +63,7 @@ Para lograr que el prototipo fuera claro y funcional se realizo e proceso de Des
 </a> 
 </p>
 
-![PrototipoBajaFidelidad](/public/assets/register.svg)
+![PrototipoBajaFidelidad](/public/assets/prototipo.svg)
 
 - **Probar**: Las pruebas se generaron mientras se le daba funcionalidad al sistema y como complemento se le pidió a un usuario probar la interfaz para poder observar el flujo de trabajo con ella, obteniendo un buen resultado de usabilidad.
 
