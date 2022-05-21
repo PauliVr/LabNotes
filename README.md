@@ -63,11 +63,11 @@ Para lograr que el prototipo fuera claro y funcional se realizo e proceso de Des
 </a> 
 </p>
 
-![PrototipoBajaFidelidad](/public/assets/prototipo.svg)
+![PrototipoBajaFidelidad](/public/assets/prototipo.png)
 
 - **Probar**: Las pruebas se generaron mientras se le daba funcionalidad al sistema y como complemento se le pidió a un usuario probar la interfaz para poder observar el flujo de trabajo con ella, obteniendo un buen resultado de usabilidad.
 
-- **Feedback**: al tener avanzado el sistema se realizaron 5 Demos en la que las mejoras que se debía hacer eran: Líneas de inputs son muy gruesas, agregar el botón de google, cambiar el color del texto del placeholder, verificar en accesibilidad el contraste de colores con lighthouse y posicionar los botones de eliminar y editar más separados. Todo el feedback fué integrado para mejorar el proyecto. ![PrototipoBajaFidelidad](/public/assets/nota.svg)
+- **Feedback**: al tener avanzado el sistema se realizaron 5 Demos en la que las mejoras que se debía hacer eran: Líneas de inputs son muy gruesas, agregar el botón de google, cambiar el color del texto del placeholder, verificar en accesibilidad el contraste de colores con lighthouse y posicionar los botones de eliminar y editar más separados. Todo el feedback fué integrado para mejorar el proyecto. ![PrototipoAltaFidelidad](/public/assets/nota.svg)
 
 # Prototipo final
 
