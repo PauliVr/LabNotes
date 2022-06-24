@@ -14,9 +14,10 @@ const useForm = (callback) => {
 
   // Validación de los inputs del formulario
   const expEmail = /^\w+([.+-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
-  const expPassword =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
-  const expUserName = /[A-Za-z][A-Za-z0-9_]{7,20}/;
+  // const expPassword =
+  //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+  const expUserName = /[A-Za-z][A-Za-z0-9]{7,20}/;
+  const expPassword = /[A-Za-z][A-Za-z0-9]{7,20}/;
   const expName = /[A-Za-z]+\s[A-Za-z]{5,22}/;
 
   const validate = (name, value) => {
