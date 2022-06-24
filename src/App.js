@@ -15,7 +15,6 @@ function App() {
         <Route path='/' element={<Dashboard />} />
         <Route path='/nuevaNota' element={<NewNote title='Nueva Nota' />} />
         <Route path='/editarNota/:id' element={<NewNote title='Editar Nota' />} />
-      
         <Route path='*' element={<Error404 />} />
       </Routes>
     </div>

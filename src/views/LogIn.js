@@ -10,6 +10,7 @@ import {
 } from 'firebase/auth';
 import { auth, userExist, registerUser } from '../firebase/firebase';
 import useForm from '../Hooks/useForm';
+
 function LogIn() {
   const navigate = useNavigate();
   const { handleChange, valueS, errors, handleSubmit } = useForm(formLogin);

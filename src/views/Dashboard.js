@@ -1,9 +1,9 @@
 import '../globalStyles.css';
 import './Dashboard.css';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth, getNote } from '../firebase/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { auth, getNote } from '../firebase/firebase';
 import ButtonLogOut from '../components/ButtonLogOut';
 import Note from '../components/Note';
 import ButtonAddNote from '../components/ButtonAddNote';
@@ -18,7 +18,7 @@ export default function Dashboard() {
   const [onDelete, setOnDelete] = useState(false);
   const [deleteId, setDeleteId] = useState('');
 
-  //se ejecuta al cambiar esta o renderiza por primera vez
+  // se ejecuta al cambiar esta o renderiza por primera vez
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -73,6 +73,7 @@ export default function Dashboard() {
                 content={doc.infoNote.content}
                 date={doc.infoNote.registerDay}
                 delete={deleteStateChange}
+                key={doc.id}
               />
             ))
           ) : loading === 2 ? (

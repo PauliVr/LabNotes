@@ -35,6 +35,7 @@ export async function userExist(uid) {
   return res.exists();
 }
 
+//google
 export async function registerUser(uid, name, email) {
   try {
     const userCollection = collection(db, 'users');

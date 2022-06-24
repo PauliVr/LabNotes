@@ -1,5 +1,6 @@
 import '../globalStyles.css';
 import './AlertNote.css';
+
 export default function AlertNote(props) {
   return (
     <div className={'container__Alert ' + props.color}>
