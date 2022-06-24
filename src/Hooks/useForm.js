@@ -68,7 +68,7 @@ const useForm = (callback) => {
           setErrors({
             ...errors,
             password:
-              'ingresa una contraseña con el formato valido, una mayúscula, un numero, una minúscula y un carater especial',
+              'ingresa una contraseña con el formato valido, empezar con letras, una mayúscula, una minúscula y números',
           });
         } else {
           const newObj = omit(errors, 'password');
